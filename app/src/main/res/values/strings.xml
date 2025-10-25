@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">Mundo Mascota</string>
+
+    <!-- Mensajes de error generales -->
+    <string name="ErrorMsgAdd">Error al agregar la información</string>
+    <string name="ErrorMsgUpdate">Error al actualizar la información</string>
+    <string name="ErrorMsgRemove">Error al eliminar la información</string>
+    <string name="ErrorMsgGetAll">Error al obtener la lista de datos</string>
+    <string name="ErrorMsgGetById">Error al obtener un dato específico</string>
+    <string name="MsgDataNoFound">No se encontró el dato</string>
+
+    <!-- Mensajes específicos para Usuario (login) -->
+    <string name="ErrorMsgLogin">Error al iniciar sesión</string>
+    <string name="MsgLoginFailed">Usuario o contraseña incorrectos</string>
+    <string name="MsgLoginSuccess">Inicio de sesión exitoso</string>
+
+    <!-- Mensajes específicos para Producto -->
+    <string name="ErrorMsgGetByCategory">Error al obtener productos por categoría</string>
+    <string name="MsgNoProducts">No hay productos disponibles en esta categoría</string>
+
+    <!-- Mensajes específicos para ItemCarrito (carrito) -->
+    <string name="ErrorMsgClearCart">Error al limpiar el carrito</string>
+    <string name="MsgCartEmptied">El carrito ha sido limpiado</string>
+    <string name="ErrorMsgAddToCart">Error al agregar al carrito</string>
+    <string name="MsgAddedToCart">Producto agregado al carrito exitosamente</string>
+
+    <!-- Etiquetas de la interfaz de usuario -->
+    <string name="labelUsername">Nombre de usuario</string>
+    <string name="labelPassword">Contraseña</string>
+    <string name="buttonLogin">Iniciar Sesión</string>
+    <string name="buttonCancel">Cancelar</string>
+    <string name="buttonAddToCart">Agregar al Carrito</string>
+    <string name="buttonPay">Pagar</string>
+    <string name="buttonClearCart">Limpiar Carrito</string>
+    <string name="titleCategoryDogs">Perros</string>
+    <string name="titleCategoryCats">Gatos</string>
+    <string name="titleCategoryAccessories">Accesorios</string>
+    <string name="titleCategoryProducts">Productos</string>
+    <string name="titleCart">Carrito</string>
+    <string name="titleConfirmation">Confirmación de Compra</string>
+    <string name="titleAbout">Acerca de</string>
+
+    <!-- Mensajes de confirmación y salida -->
+    <string name="msgPurchaseConfirmed">Compra realizada con éxito</string>
+    <string name="buttonExit">Salir</string>
+    <string name="msgThankYou">¡Gracias por tu compra!</string>
+</resources>
