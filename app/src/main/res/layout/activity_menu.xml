@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#FFFFFF">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPerros"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:text="Perros"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        app:cornerRadius="30dp"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGatos"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:text="Gatos"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        app:cornerRadius="30dp"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAccesorios"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:text="Accesorios"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        app:cornerRadius="30dp"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnProductos"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:text="Productos"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+</LinearLayout>
