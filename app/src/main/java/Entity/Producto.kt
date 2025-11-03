@@ -1,6 +1,7 @@
+
 package Entity
 
-import Entity.Categoria
+import com.example.mundomascota.Util
 
 class Producto {
     private var id: String = ""
