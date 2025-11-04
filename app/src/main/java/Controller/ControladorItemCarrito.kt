@@ -3,26 +3,27 @@ package Controller
 import Data.IDataManager
 import Data.MemoryDataManager
 import Entity.ItemCarrito
+import Entity.Producto
 import android.content.Context
 import com.example.mundomascota.R
 
 class ControladorItemCarrito {
     private var dataManager: IDataManager = MemoryDataManager
-    private lateinit var Context: Context
+    private lateinit var context: Context
 
     constructor(context: Context) {
-        this.Context = context
+        this.context = context
     }
 
     fun obtenerItemCarritoPorId(idProducto: String): ItemCarrito {
         try {
             val result = dataManager.getById(idProducto) as? ItemCarrito
             if (result == null) {
-                throw Exception(Context.getString(R.string.MsgDataNoFound))
+                throw Exception(context.getString(R.string.MsgDataNoFound))
             }
             return result
         } catch (e: Exception) {
-            throw Exception(Context.getString(R.string.ErrorMsgGetById))
+            throw Exception(context.getString(R.string.ErrorMsgGetById))
         }
     }
 
@@ -30,7 +31,7 @@ class ControladorItemCarrito {
         try {
             dataManager.add(item)
         } catch (e: Exception) {
-            throw Exception(Context.getString(R.string.ErrorMsgAdd))
+            throw Exception(context.getString(R.string.ErrorMsgAdd))
         }
     }
 
@@ -38,7 +39,7 @@ class ControladorItemCarrito {
         try {
             dataManager.update(item)
         } catch (e: Exception) {
-            throw Exception(Context.getString(R.string.ErrorMsgUpdate))
+            throw Exception(context.getString(R.string.ErrorMsgUpdate))
         }
     }
 
@@ -46,7 +47,7 @@ class ControladorItemCarrito {
         try {
             dataManager.remove(item.Producto.Id)
         } catch (e: Exception) {
-            throw Exception(Context.getString(R.string.ErrorMsgRemove))
+            throw Exception(context.getString(R.string.ErrorMsgRemove))
         }
     }
 
@@ -54,7 +55,7 @@ class ControladorItemCarrito {
         try {
             dataManager.clearCarrito()
         } catch (e: Exception) {
-            throw Exception(Context.getString(R.string.ErrorMsgRemove))
+            throw Exception(context.getString(R.string.ErrorMsgRemove))
         }
     }
 }
