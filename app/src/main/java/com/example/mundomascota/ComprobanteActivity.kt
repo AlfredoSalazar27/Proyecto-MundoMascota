@@ -1,4 +1,4 @@
-// ComprobanteActivity.kt
+
 package com.example.mundomascota
 
 import Controller.ControladorItemCarrito
@@ -18,11 +18,11 @@ class ComprobanteActivity : AppCompatActivity() {
         controlador = ControladorItemCarrito(this)
 
         findViewById<MaterialButton>(R.id.btnSalir).setOnClickListener {
-            // Vaciar carrito
+
             controlador.limpiarCarrito()
-            // Ir al menú principal
+
             startActivity(Intent(this, MenuActivity::class.java))
-            finishAffinity() // Cierra todas las actividades anteriores
+            finishAffinity()
         }
     }
 }

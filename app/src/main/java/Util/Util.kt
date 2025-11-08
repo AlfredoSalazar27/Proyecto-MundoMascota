@@ -1,4 +1,4 @@
-// Util.kt
+
 package com.example.mundomascota
 
 import java.text.NumberFormat
