@@ -3,6 +3,7 @@ package com.example.mundomascota
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
@@ -55,5 +56,10 @@ class MainActivity : AppCompatActivity() {
             txtPassword.text?.clear()
             txtUsuario.requestFocus()
         }
+
+        findViewById<TextView>(R.id.tvNoCuenta).setOnClickListener {
+            startActivity(Intent(this, RegistroActivity::class.java))
+        }
+
     }
 }

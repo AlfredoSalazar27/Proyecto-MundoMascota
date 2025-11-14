@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MundoMascota">
         <activity
+            android:name=".RegistroActivity"
+            android:exported="false" />
+        <activity
             android:name=".DespedidaActivity"
             android:exported="false" />
         <activity
@@ -45,3 +48,4 @@
     </application>
 
 </manifest>
+

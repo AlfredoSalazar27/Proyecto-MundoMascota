@@ -1,4 +1,4 @@
-// ItemCarrito.kt
+
 package Entity
 
 import com.example.mundomascota.Util
