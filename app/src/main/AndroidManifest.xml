@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- PERMISOS (SIEMPRE FUERA DEL <application>) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -10,32 +19,10 @@
         android:label="MundoMascota"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MundoMascota">
-        <activity
-            android:name=".RegistroActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DespedidaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ComprobanteActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProductosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AccesoriosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GatosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PerrosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MenuActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
+        android:theme="@style/Theme.MundoMascota"
+        tools:targetApi="31">
+
+        <!-- MAIN ACTIVITY (PANTALLA DE INICIO) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -44,8 +31,35 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- MENU -->
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" /> <!-- CATEGORÍAS -->
+        <activity
+            android:name=".PerrosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GatosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AccesoriosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductosActivity"
+            android:exported="false" /> <!-- PAGO Y COMPROBANTE -->
+        <activity
+            android:name=".PagoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ComprobanteActivity"
+            android:exported="false" /> <!-- REGISTRO Y DESPEDIDA -->
+        <activity
+            android:name=".RegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DespedidaActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
-
