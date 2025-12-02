@@ -7,7 +7,7 @@
     android:background="#FFFFFF"
     android:padding="24dp">
 
-
+    <!-- BARRA SUPERIOR -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -33,7 +33,6 @@
             android:textStyle="bold"
             android:gravity="center" />
 
-
         <ImageButton
             android:id="@+id/btnDelete"
             android:layout_width="48dp"
@@ -56,7 +55,7 @@
             android:background="?attr/selectableItemBackgroundBorderless" />
     </LinearLayout>
 
-
+    <!-- FORMULARIO -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -68,7 +67,7 @@
             android:orientation="vertical"
             android:paddingTop="24dp">
 
-
+            <!-- ID + BUSCAR -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,49 +86,25 @@
                     android:inputType="number" />
 
                 <ImageView
+                    android:id="@+id/ivSearchId"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@android:drawable/ic_menu_search"
                     android:layout_marginStart="8dp"
                     android:clickable="true"
-                    android:focusable="true"
-                    android:id="@+id/ivSearchId" />
+                    android:focusable="true" />
             </LinearLayout>
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginBottom="16dp" />
 
-
-            <EditText
-                android:id="@+id/etNombre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nombre"
-                android:textSize="16sp"
-                android:background="@null"
-                android:layout_marginBottom="16dp" />
+            <!-- CAMPOS -->
+            <EditText android:id="@+id/etNombre" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nombre" android:textSize="16sp" android:background="@null" android:layout_marginBottom="16dp" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginBottom="16dp" />
 
-
-            <EditText
-                android:id="@+id/etPrimerApellido"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Primer apellido"
-                android:textSize="16sp"
-                android:background="@null"
-                android:layout_marginBottom="16dp" />
+            <EditText android:id="@+id/etPrimerApellido" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Primer apellido" android:textSize="16sp" android:background="@null" android:layout_marginBottom="16dp" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginBottom="16dp" />
 
-
-            <EditText
-                android:id="@+id/etSegundoApellido"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Segundo apellido"
-                android:textSize="16sp"
-                android:background="@null"
-                android:layout_marginBottom="16dp" />
+            <EditText android:id="@+id/etSegundoApellido" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Segundo apellido" android:textSize="16sp" android:background="@null" android:layout_marginBottom="16dp" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginBottom="16dp" />
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -158,41 +133,47 @@
             </LinearLayout>
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginBottom="16dp" />
 
-
-            <EditText
-                android:id="@+id/etCorreo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Correo"
-                android:textSize="16sp"
-                android:background="@null"
-                android:inputType="textEmailAddress"
-                android:layout_marginBottom="16dp" />
+            <EditText android:id="@+id/etCorreo" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Correo" android:textSize="16sp" android:background="@null" android:inputType="textEmailAddress" android:layout_marginBottom="16dp" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginBottom="16dp" />
 
-
-            <EditText
-                android:id="@+id/etTelefono"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Teléfono"
-                android:textSize="16sp"
-                android:background="@null"
-                android:inputType="phone"
-                android:layout_marginBottom="16dp" />
+            <EditText android:id="@+id/etTelefono" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Teléfono" android:textSize="16sp" android:background="@null" android:inputType="phone" android:layout_marginBottom="16dp" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginBottom="16dp" />
-
 
             <EditText android:id="@+id/etProvincia" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Provincia" android:textSize="16sp" android:background="@null" android:layout_marginBottom="16dp" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginBottom="16dp" />
+
             <EditText android:id="@+id/etCanton" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Cantón" android:textSize="16sp" android:background="@null" android:layout_marginBottom="16dp" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginBottom="16dp" />
+
             <EditText android:id="@+id/etDistrito" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Distrito" android:textSize="16sp" android:background="@null" android:layout_marginBottom="16dp" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginBottom="16dp" />
+
             <EditText android:id="@+id/etDireccion" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Dirección" android:textSize="16sp" android:background="@null" android:layout_marginBottom="24dp" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginBottom="24dp" />
 
+            <!-- VISTA PREVIA DE CÁMARA -->
+            <androidx.camera.view.PreviewView
+                android:id="@+id/previewView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_camera" />
 
+            <!-- BOTÓN TOMAR FOTO -->
+            <ImageView
+                android:id="@+id/ivTomarFoto"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_camera"
+                android:background="@drawable/circle_purple"
+                android:contentDescription="Tomar foto"
+                android:layout_gravity="center"
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true" />
+            <!-- BOTÓN REGISTRAR -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRegistrar"
                 android:layout_width="match_parent"
@@ -202,6 +183,19 @@
                 android:textStyle="bold"
                 app:cornerRadius="30dp"
                 android:backgroundTint="#6A1B9A" />
+
+            <!-- BOTÓN GALERÍA -->
+            <ImageView
+                android:id="@+id/ivGaleria"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_gallery"
+                android:background="@drawable/circle_purple"
+                android:contentDescription="Seleccionar de galería"
+                android:layout_marginStart="16dp"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true" />
 
         </LinearLayout>
     </ScrollView>

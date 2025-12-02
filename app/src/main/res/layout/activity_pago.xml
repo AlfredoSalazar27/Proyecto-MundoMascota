@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FA">
+
+    <!-- BARRA SUPERIOR MORADA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#6A1B9A">
+
+        <!-- FLECHA IZQUIERDA -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Volver al menú" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pago"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- CONTENIDO CENTRADO -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- IMAGEN DEL PRODUCTO -->
+            <ImageView
+                android:id="@+id/iv_product_image"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/ic_pet_placeholder"
+                android:scaleType="centerCrop"
+                android:contentDescription="Imagen del producto"
+                android:background="@drawable/circle_background" />
+
+            <!-- NOMBRE -->
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:textColor="#1A1A1A" />
+
+            <!-- PRECIO -->
+            <TextView
+                android:id="@+id/tv_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₡ 0.00"
+                android:textSize="34sp"
+                android:textColor="#2E7D32"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold" />
+
+            <!-- BOTÓN CONFIRMAR -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_confirm_payment"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:text="Confirmar Pago"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="36dp"
+                app:cornerRadius="12dp"
+                android:backgroundTint="#6A1B9A"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
