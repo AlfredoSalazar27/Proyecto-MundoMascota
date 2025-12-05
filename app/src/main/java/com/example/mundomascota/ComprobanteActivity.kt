@@ -1,4 +1,3 @@
-// ComprobanteActivity.kt
 package com.example.mundomascota
 
 import Controller.ControladorItemCarrito
@@ -15,20 +14,29 @@ class ComprobanteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_comprobante)
 
-        // Inicializar controlador del carrito
         controlador = ControladorItemCarrito(this)
 
-        // BOTÓN SALIR → VA A DESPEDIDA
+        // === VER HISTORIAL SIN SALIR ===
+        findViewById<MaterialButton>(R.id.btnVerHistorial).setOnClickListener {
+            // GUARDAR LA COMPRA ACTUAL EN HISTORIAL
+            controlador.guardarCompraEnHistorial()
+
+            // ABRIR HISTORIAL (NO SE CIERRA LA APP)
+            startActivity(Intent(this, HistorialActivity::class.java))
+        }
+
+        // === SALIR (GUARDA Y CIERRA) ===
         findViewById<MaterialButton>(R.id.btnSalir).setOnClickListener {
-            // 1. Limpiar el carrito
+            // GUARDAR HISTORIAL
+            controlador.guardarCompraEnHistorial()
+
+            // LIMPIAR CARRITO
             controlador.limpiarCarrito()
 
-            // 2. Ir a DespedidaActivity
+            // IR A DESPEDIDA Y CERRAR TODO
             val intent = Intent(this, DespedidaActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
-
-            // 3. Cerrar TODAS las actividades anteriores
             finishAffinity()
         }
     }

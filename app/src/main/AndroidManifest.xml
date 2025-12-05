@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <!-- PERMISOS (SIEMPRE FUERA DEL <application>) -->
+
+    <!-- PERMISOS -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- CARACTERÍSTICAS DE HARDWARE -->
     <uses-feature android:name="android.hardware.camera" android:required="false" />
     <uses-feature android:name="android.hardware.camera.front" android:required="false" />
-
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -28,38 +29,33 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- MENU -->
+        </activity>
+
+        <!-- MENU Y CATEGORÍAS -->
         <activity
             android:name=".MenuActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" /> <!-- CATEGORÍAS -->
-        <activity
-            android:name=".PerrosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GatosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AccesoriosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProductosActivity"
-            android:exported="false" /> <!-- PAGO Y COMPROBANTE -->
-        <activity
-            android:name=".PagoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ComprobanteActivity"
-            android:exported="false" /> <!-- REGISTRO Y DESPEDIDA -->
-        <activity
-            android:name=".RegistroActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DespedidaActivity"
-            android:exported="false" />
-    </application>
+            android:parentActivityName=".MainActivity" />
 
+        <activity android:name=".PerrosActivity" android:exported="false" />
+        <activity android:name=".GatosActivity" android:exported="false" />
+        <activity android:name=".AccesoriosActivity" android:exported="false" />
+        <activity android:name=".ProductosActivity" android:exported="false" />
+
+        <!-- COMPRA Y COMPROBANTE -->
+        <activity android:name=".PagoActivity" android:exported="false" />
+        <activity android:name=".ComprobanteActivity" android:exported="false" />
+        <activity android:name=".DespedidaActivity" android:exported="false" />
+
+        <!-- REGISTRO Y EXTRAS -->
+        <activity android:name=".RegistroActivity" android:exported="false" />
+        <activity android:name=".HistorialActivity" android:exported="false" />
+        <activity android:name=".ItemComprasActivity" android:exported="false" />
+
+        <!-- GSON (para historial) -->
+        <uses-library android:name="com.google.gson" android:required="false" />
+
+    </application>
 </manifest>

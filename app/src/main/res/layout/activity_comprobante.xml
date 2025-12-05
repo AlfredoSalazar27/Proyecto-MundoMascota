@@ -62,17 +62,31 @@
             android:layout_marginBottom="48dp" />
 
 
+        <!-- BOTÓN VER HISTORIAL -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Ver historial de compras"
+            android:textSize="16sp"
+            app:cornerRadius="30dp"
+            android:backgroundTint="#6A1B9A"
+            android:textColor="#FFFFFF"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- BOTÓN SALIR (como ya lo tenías) -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSalir"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
             android:text="Salir"
             android:textSize="18sp"
             app:cornerRadius="30dp"
             app:strokeColor="#000000"
             app:strokeWidth="2dp"
-            android:paddingHorizontal="32dp" />
+            android:layout_marginHorizontal="32dp" />
 
     </LinearLayout>
 
