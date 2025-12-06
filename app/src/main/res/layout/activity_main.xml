@@ -6,16 +6,19 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="#FFFFFF"
-    android:padding="24dp">
+    android:padding="32dp">
 
-    <!-- LOGO PRINCIPAL -->
+    <!-- LOGO QUE GIRA SUAVEMENTE -->
     <ImageView
         android:id="@+id/ivLogo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:src="@drawable/ic_paw"
         android:layout_marginBottom="24dp"
-        android:contentDescription="Logo Mundo Mascota" />
+        android:contentDescription="Logo Mundo Mascota"
+        android:scaleType="centerInside"
+        android:padding="24dp"
+        android:elevation="12dp" />
 
     <!-- TÍTULOS -->
     <TextView
@@ -33,109 +36,92 @@
         android:textSize="32sp"
         android:textColor="#555555"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="48dp" />
 
-    <!-- CÁMARA FACE ID -->
-    <androidx.camera.view.PreviewView
-        android:id="@+id/previewView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginBottom="32dp"
-        android:scaleType="fitCenter" />
+    <!-- USUARIO -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usuario"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxStrokeColor="#6A1B9A"
+        app:hintTextColor="#6A1B9A">
 
-    <!-- BOTÓN TOMAR FOTO -->
-    <ImageView
-        android:id="@+id/ivTomarFoto"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:src="@drawable/ic_camera"
-        android:background="@drawable/circle_purple"
-        android:contentDescription="Tomar foto para Face ID"
-        android:layout_gravity="center_horizontal"
-        android:padding="16dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:elevation="12dp"
-        android:backgroundTint="#6A1B9A" />
-
-
-        <!-- USUARIO -->
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Usuario"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxStrokeColor="#6A1B9A"
-            app:hintTextColor="#6A1B9A">
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtUsuario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="admin" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <!-- CONTRASEÑA -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxStrokeColor="#6A1B9A"
+        app:hintTextColor="#6A1B9A"
+        android:layout_marginTop="16dp">
 
-        <!-- CONTRASEÑA -->
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contraseña"
-            app:passwordToggleEnabled="true"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxStrokeColor="#6A1B9A"
-            app:hintTextColor="#6A1B9A"
-            android:layout_marginTop="16dp">
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:text="1234" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <!-- BOTONES -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="32dp">
 
-        <!-- BOTONES -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="24dp">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="Cancelar"
+            app:cornerRadius="30dp"
+            android:layout_marginEnd="12dp" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnCancelar"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="56dp"
-                android:text="Cancelar"
-                app:cornerRadius="30dp"
-                android:layout_marginEnd="8dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnAceptar"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="56dp"
-                android:text="Ingresar"
-                app:cornerRadius="30dp"
-                android:backgroundTint="#6A1B9A"
-                android:textColor="#FFFFFF"
-                android:layout_marginStart="8dp" />
-        </LinearLayout>
-
-        <!-- REGISTRARSE -->
-        <TextView
-            android:id="@+id/tvRegistrarse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¿No tienes cuenta? Regístrate"
-            android:textColor="#6A1B9A"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_marginTop="24dp"
-            android:clickable="true"
-            android:focusable="true" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAceptar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="Aceptar"
+            app:cornerRadius="30dp"
+            android:backgroundTint="#6A1B9A"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="12dp" />
     </LinearLayout>
 
+    <!-- REGISTRARSE -->
+    <TextView
+        android:id="@+id/tvRegistrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes cuenta? Regístrate"
+        android:textColor="#6A1B9A"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>

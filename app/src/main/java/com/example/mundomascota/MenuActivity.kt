@@ -37,5 +37,6 @@ class MenuActivity : AppCompatActivity() {
         findViewById<MaterialButton>(R.id.btnProductos).setOnClickListener {
             startActivity(Intent(this, ProductosActivity::class.java))
         }
+
     }
 }

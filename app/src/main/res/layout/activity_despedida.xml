@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="#F8F9FA">
 
-
+    <!-- BARRA SUPERIOR MORADA -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -14,9 +14,18 @@
         android:gravity="center_vertical"
         android:background="#6A1B9A">
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="¡Gracias!"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
     </LinearLayout>
 
-
+    <!-- CONTENIDO -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,14 +33,15 @@
         android:gravity="center"
         android:padding="32dp">
 
-
+        <!-- HUELLA -->
         <ImageView
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:src="@drawable/ic_paw"
-            android:layout_marginBottom="48dp" />
+            android:layout_marginBottom="48dp"
+            android:contentDescription="Gracias por tu visita" />
 
-
+        <!-- MENSAJE -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,19 +51,41 @@
             android:textColor="#000000"
             android:layout_marginBottom="48dp" />
 
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnVolverInicio"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="wrap_content"
+        <!-- DOS BOTONES -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Volver al inicio"
-            android:textSize="18sp"
-            app:cornerRadius="30dp"
-            app:strokeColor="#000000"
-            app:strokeWidth="2dp"
-            android:paddingHorizontal="32dp" />
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <!-- VOLVER AL INICIO -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVolverInicio"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp"
+                android:text="Volver al inicio"
+                android:textSize="16sp"
+                app:cornerRadius="30dp"
+                app:strokeColor="#6A1B9A"
+                app:strokeWidth="2dp"
+                android:layout_marginEnd="12dp" />
+
+            <!-- CERRAR SESIÓN (CIERRA LA APP) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCerrarSesion"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp"
+                android:text="Cerrar sesión"
+                android:textSize="16sp"
+                app:cornerRadius="30dp"
+                android:backgroundTint="#6A1B9A"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
 
     </LinearLayout>
-
 </LinearLayout>
